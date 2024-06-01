@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('./fonts/MonumentExtended-Regular.otf');
+}
+/* 
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('./fonts/MonumentExtended-Ultrabold.otf');
+  font-weight: bold;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Monument Extended';
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Monument Extended';
+  letter-spacing: 0.2rem;
+}
