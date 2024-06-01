@@ -33,7 +33,7 @@ const Navbar = () => {
             })}
           </Navs>
           <Apply>
-            <NavLink className="apply-button" to={'https://academy.grtministry.com'} target="_blank">
+            <NavLink className="apply-button" to={'https://forms.gle/yfgfXUd3RHqpehSR6'} target="_blank">
               <div className="under-layer"></div><span>Apply Now</span></NavLink>
           </Apply>
       </Wrapper>
