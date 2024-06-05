@@ -270,7 +270,7 @@ const CourseList = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 0 8rem;
   flex-direction: row;
   @media (max-width: 768px) {
     padding: 10px;
