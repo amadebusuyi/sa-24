@@ -17,13 +17,13 @@ const Footer = () => {
             icon: email,
             text: 'gloryrealmteensmin@gmail.com',
         },
-        {
-            icon: phone,
-            text: '+234 915 410 4675',
-        },
+        // {
+        //     icon: phone,
+        //     text: '+234 915 410 4675',
+        // },
         {
             icon: instagram,
-            text: '@gloryrealmsteensmin',
+            text: '@grtministry',
         },
     ];
     return(
@@ -33,7 +33,7 @@ const Footer = () => {
             Discover your best self
           </Title>
           <Apply>
-            <NavLink className="apply-button-2" to={'https://academy.grtministry.com'} target="_blank">
+            <NavLink className="apply-button-2" to={'https://forms.gle/yfgfXUd3RHqpehSR6'} target="_blank">
               <div className="under-layer"></div><span>Apply Now</span></NavLink>
           </Apply>
           <Info>

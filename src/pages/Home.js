@@ -4,7 +4,8 @@ import heroImg from "../images/herobg.png";
 import heroMob from "../images/hero-mob.png";
 import riseBig from "../images/rise-big.png";
 import banner from "../images/banner.png";
-import icon from "../images/star-icon.png";
+import sa24 from "../images/sa-24-banner.png";
+import red from "../images/red-effect.png";
 import About from "../components/About";
 import Testimonials from "../components/Testimonials";
 import Data from "../data";
@@ -36,8 +37,12 @@ export default function Home() {
         <Banner>
           <img src={banner} alt="" />
         </Banner>
+          <Apply>
+            <NavLink className="apply-button" to={'https://forms.gle/yfgfXUd3RHqpehSR6'} target="_blank">
+              <div className="under-layer"></div><span>Apply Now</span></NavLink>
+          </Apply>
       </Header>
-      <Slider>
+      {/* <Slider>
           <Box>
             <div className="scroll-control">
               { words.map((word, index) => {
@@ -50,7 +55,7 @@ export default function Home() {
               }) }
             </div>
           </Box>
-      </Slider>
+      </Slider> */}
       <About title="GRTM SUMMER ACADEMY" info={[
         "Learn the skills and knowledge you need to succeed in today's ever changing world.",
         "With a variety of vocational trainings, courses and workshops in Arts, Technology, Leadership, Communication, Emotional Intelligence, Service and Godliness.",
@@ -62,13 +67,15 @@ export default function Home() {
           {Data.Courses.map((course, index) => {
             return(
               <Course key={index}>
-                <img src={course.img} alt="" />
-                <p><NavLink className="link" to={`courses/${course.key}`}>{course.title}</NavLink></p>
+                <p>{course.title}</p>
               </Course>
             )
           })}
         </CourseList>
       </Courses>
+      {/* <Banner2>
+        <img src={sa24} alt="" />
+      </Banner2> */}
       <Testimonials testimonies={Data.Testimonials} />
       <Footer />
     </>
@@ -79,7 +86,9 @@ const Header = styled.div`
   background: url(${heroImg});
   background-size: cover;
   height: calc(100vw * 0.7);
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
   @media (max-width: 768px) {
     background: url('${heroMob}');
     background-size: cover;
@@ -105,6 +114,67 @@ const Banner = styled.div`
 
     @media (max-width: 768px) {
       width: 90%;
+    }
+  }
+`;
+
+const Banner2 = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  img {
+    width: calc(100% + 2px);
+    margin-left: -2px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+`;
+
+
+const Apply = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  // right: 8rem;
+  top: 70px;
+  @media (max-width: 768px) {
+    top: 150px;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .apply-button {
+    position: relative;
+    margin-top: -10px;
+    &.hover {
+      transform: scale(1.2);
+    }
+    span {
+      display: inline-flex;
+      position: relative;
+      font-size: 16px;
+      font-weight: bold;
+      background: white;
+      border-radius: 25px;
+      padding: 10px 20px;
+      z-index: 10;
+      color: black;
+      font-weight: 800;
+      border: 2px solid black;
+      letter-spacing: 0.05rem;
+    }
+    .under-layer {
+      position: absolute;
+      background: red;
+      width: 170px;
+      height: 50px;
+      margin-top: 2.5px;
+      margin-left: 7.5px;
+      border: 2px solid black;
+      border-radius: 25px;
+      z-index: 0;
     }
   }
 `;
@@ -174,57 +244,63 @@ const Courses = styled.div`
   display: flex;
   padding: 100px 6rem;
   flex-direction: column;
+  background: black;
   justify-content: center;
   align-items: center;
-  background: black;
   h1 {
     font-size: 3rem;
     font-weight: 800;
     color: white;
+    text-align: left;
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 100px 10px;
   }
 `;
 
 const CourseList = styled.div`
   display: flex;
   position: relative;
+  background: url('${red}');
+  background-size: cover;
+  // background: red;
   top: 50px;
+  width: 100vw;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   padding: 0;
+  flex-direction: row;
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 10px;
   }
 `;
 
 const Course = styled.div`
   display: flex;
   color: white;
-  text-transform: uppercase;
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.3);
   letter-spacing: 1px;
   text-align: center;
   flex-direction: column;
   justify-content: space-round;
-  margin: 25px;
-  margin-bottom: 100px;
-  width: 22.8rem;
-  @media (max-width: 768px) {
-    padding: 20px;
-  }
-  height: 250px;
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background: white;
-  }
+  margin: 10px;
+  border-radius: 7.5px;
   p {
-    margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 500;
     .link{
       &:hover, &:active {
         text-decoration: none;
       }
+    }
+    @media (max-width: 768px) {
+      font-size: 10px;
+      font-weight: normal;
     }
   }
 `;

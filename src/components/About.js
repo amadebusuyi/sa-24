@@ -2,35 +2,41 @@ import styled from "styled-components";
 import blueStar from "../images/frame-star-blue.png";
 
 const About = ({ title, info }) => {
-    return(
-      <Wrapper>
-          <BorderImg className="top">&nbsp;</BorderImg>
-          <Title>
-            {title}
-          </Title>
-          <Info>
-            {info.map((p, index) => {
-                return(
-                    <p key={index}>{p}</p>
-                );
-            })}
-          </Info>
+    return(<DivBlock>
+            <BorderImg className="top">&nbsp;</BorderImg>
+            <Wrapper>
+                <Title>
+                    {title}
+                </Title>
+                <Info>
+                    {info.map((p, index) => {
+                        return(
+                            <p key={index}>{p}</p>
+                        );
+                    })}
+                </Info>
+            </Wrapper>
           <BorderImg className="bottom">&nbsp;</BorderImg>
-      </Wrapper>
+    </DivBlock>
     )
 }
 
 export default About;
 
+const DivBlock = styled.div`
+    position: relative;=
+`;
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   padding: 100px 8rem;
   background: #1610F5;
   margin: 0;
   display: flex;
   position: relative;
   color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
   flex-direction: row;
   @media (max-width: 768px) {
     padding: 100px 20px;
@@ -44,12 +50,15 @@ const BorderImg = styled.div`
     left: 0;
     right: 0;
     width: 100%;
+    height: 50px;
     background: url('${blueStar}');
+    background-size: cover;
+    z-index: 5000;
     &.top {
-        top: -20px;
+        top: -25px;
     }
     &.bottom {
-        bottom: -15px;
+        bottom: -25px;
     }
 `;
 

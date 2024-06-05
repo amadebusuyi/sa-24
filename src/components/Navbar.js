@@ -5,25 +5,25 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const pages = [
-    {
-      name: 'Home',
-      path: '/',
-    },
-    {
-      name: 'Courses',
-      path: '/courses',
-    },
-    {
-      name: 'Past Cohorts',
-      path: '/past-cohorts',
-    },
+    // {
+    //   name: 'Home',
+    //   path: '/',
+    // },
+    // {
+    //   name: 'Courses',
+    //   path: '/courses',
+    // },
+    // {
+    //   name: 'Past Cohorts',
+    //   path: '/past-cohorts',
+    // },
   ];
     return(
       <Wrapper>
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
-          <Menu><img src={menu} alt="" /></Menu>
+          {/* <Menu><img src={menu} alt="" /></Menu> */}
           <Navs>
             {/* <i className="nav-links fa fa-bars">Hello</i> */}
             {pages.map((page, index) => {
@@ -32,10 +32,6 @@ const Navbar = () => {
               )
             })}
           </Navs>
-          <Apply>
-            <NavLink className="apply-button" to={'https://forms.gle/yfgfXUd3RHqpehSR6'} target="_blank">
-              <div className="under-layer"></div><span>Apply Now</span></NavLink>
-          </Apply>
       </Wrapper>
     )
 }
@@ -87,46 +83,5 @@ const Menu = styled.div`
   }
   @media (min-width: 769px) {
     display: none;
-  }
-`;
-
-const Apply = styled.div`
-  display: inline-flex;
-  position: absolute;
-  right: 8rem;
-  @media (max-width: 768px) {
-    top: 550%;
-    right: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .apply-button {
-    position: relative;
-    margin-top: -10px;
-    span {
-      display: inline-flex;
-      position: relative;
-      font-size: 16px;
-      font-weight: bold;
-      background: white;
-      border-radius: 25px;
-      padding: 10px 20px;
-      z-index: 10;
-      color: black;
-      font-weight: 800;
-      border: 2px solid black;
-      letter-spacing: 0.05rem;
-    }
-    .under-layer {
-      position: absolute;
-      background: red;
-      width: 170px;
-      height: 50px;
-      margin-top: 6px;
-      margin-left: 7.5px;
-      border: 2px solid black;
-      border-radius: 25px;
-      z-index: 0;
-    }
   }
 `;

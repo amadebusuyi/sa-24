@@ -47,7 +47,7 @@ const Testimonials = (props) => {
 export default Testimonials;
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   padding: 100px 0;
   background: #000;
   margin: 0;
@@ -56,6 +56,7 @@ const Wrapper = styled.div`
   color: white;
   flex-direction: column;
   justify-content: center;
+  overflow-x: hidden;
   h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -117,7 +118,7 @@ const Testimony = styled.div`
     position: relative;
     flex-direction: column;
     border: 2px solid rgba(255, 178, 0, 0.12);
-    border-radius: 25px;
+    border-radius: 15px;
     background: rgba(255, 178, 0, 0.08);
     :hover {
         cursor: pointer;
@@ -140,13 +141,14 @@ const Author = styled.div`
     flex-direction: row;
     margin-bottom: 10px;
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     img {
         width: 30px;
         height: 30px;
         border-radius: 5px;
         margin-right: 10px;
         background: white;
+        margin-top: -2.5px;
     }
     h5 {
         color: white;

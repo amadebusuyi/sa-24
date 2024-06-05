@@ -16,9 +16,11 @@
   font-family: 'Monument Extended';
 }
 
-body {
+html, body {
   width: 100vw;
   overflow-x: hidden;
+  padding: 0 !important;
+  background: black;
 }
 
 h1 {
