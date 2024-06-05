@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import arrowLight from "../images/frame-arrow-light.png";
-// import spark from "../images/ellipse.png";
+import yellow from "../images/yellow-effect.png";
 import { useEffect, useState } from "react";
 
 const Testimonials = (props) => {
@@ -49,7 +49,8 @@ export default Testimonials;
 const Wrapper = styled.div`
   width: 100vw;
   padding: 100px 0;
-  background: #000;
+  background: url('${yellow}');
+  background-size: cover;
   margin: 0;
   display: flex;
   position: relative;

@@ -4,7 +4,7 @@ import heroImg from "../images/herobg.png";
 import heroMob from "../images/hero-mob.png";
 import riseBig from "../images/rise-big.png";
 import banner from "../images/banner.png";
-import sa24 from "../images/sa-24-banner.png";
+// import sa24 from "../images/sa-24-banner.png";
 import red from "../images/red-effect.png";
 import About from "../components/About";
 import Testimonials from "../components/Testimonials";
@@ -244,7 +244,8 @@ const Courses = styled.div`
   display: flex;
   padding: 100px 6rem;
   flex-direction: column;
-  background: black;
+  background: url('${red}');
+  background-size: cover;
   justify-content: center;
   align-items: center;
   h1 {
@@ -264,9 +265,6 @@ const Courses = styled.div`
 const CourseList = styled.div`
   display: flex;
   position: relative;
-  background: url('${red}');
-  background-size: cover;
-  // background: red;
   top: 50px;
   width: 100vw;
   flex-wrap: wrap;
