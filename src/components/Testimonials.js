@@ -22,7 +22,7 @@ const Testimonials = (props) => {
     return (<>
         <Wrapper>
             <h1>Testimonials</h1>
-            <BorderImg className="top">&nbsp;</BorderImg>
+            {/* <BorderImg className="top">&nbsp;</BorderImg> */}
             {/* <Ignition>&nbsp;</Ignition> */}
             <Testimonies>
                 {testimonies.map((testimony, index) => {

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../images/logo-3.png";
 import location from "../images/location.png";
 import email from "../images/email.png";
-import phone from "../images/phone.png";
+import apply from "../images/apply.png";
 import instagram from "../images/instagram.png";
 
 const Footer = () => {
@@ -34,7 +34,8 @@ const Footer = () => {
           </Title>
           <Apply>
             <NavLink className="apply-button-2" to={'https://forms.gle/yfgfXUd3RHqpehSR6'} target="_blank">
-              <div className="under-layer"></div><span>Apply Now</span></NavLink>
+              <img src={apply} alt="" />
+            </NavLink>
           </Apply>
           <Info>
             <img src={logo} alt="" />
@@ -78,7 +79,7 @@ const BorderImg = styled.div`
     width: 100%;
     background: url('${yellowArrow}');
     &.top {
-        top: -20px;
+        top: -18px;
     }
 `;
 
@@ -147,30 +148,16 @@ const Apply = styled.div`
   .apply-button-2 {
     position: relative;
     margin-top: -10px;
-    span {
-      display: inline-flex;
-      position: relative;
-      font-size: 20px;
-      font-weight: bold;
-      background: white;
-      border-radius: 25px;
-      padding: 12.5px 20px;
-      z-index: 10;
-      color: black;
-      font-weight: 800;
-      border: 2px solid black;
-      letter-spacing: 0.05rem;
+    text-decoration: none;
+    img {
+        height: 70px;
+        @media (max-width: 768px) {
+            height: 60px;
+        }
     }
-    .under-layer {
-      position: absolute;
-      background: red;
-      width: 200px;
-      height: 55px;
-      margin-top: 12.5px;
-      margin-left: 7.5px;
-      border-radius: 25px;
-      border: 2px solid black;
-      z-index: 0;
+    &:hover {
+      transform: scale(0.96);
+      opacity: 0.8;
     }
   }
 `;
