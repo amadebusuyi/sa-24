@@ -58,7 +58,7 @@ const Wrapper = styled.div`
     position: absolute;
     left: 8rem;
     @media (max-width: 768px) {
-      height: 20px;
+      height: 24px;
       left: 20px;
     }
   }
@@ -69,15 +69,19 @@ const Wrapper = styled.div`
     right: 8rem;
     @media (max-width: 768px) {
       height: 30px;
-      right: 20px;
+      right: 20px !important;
+      justify-content: right;
     }
   }
   .rise {
     height: 100px;
     display: inline-flex;
-    position: absolute;
-    margin-left: 4rem;
-    @media (max-width: 768px) {
+    position: relative;
+    left: 4rem;
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      // justify-content: center;
+      left: calc(50% - 40px);
       height: 30px;
       margin-left: 20px;
     }

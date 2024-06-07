@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import arrowLight from "../images/frame-arrow-light.png";
+// import arrowLight from "../images/frame-arrow-light.png";
 import yellow from "../images/yellow-effect.png";
 import { useEffect, useState } from "react";
 
@@ -71,16 +71,16 @@ const Wrapper = styled.div`
   }
 `;
 
-const BorderImg = styled.div`
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: url('${arrowLight}');
-    &.top {
-        top: 20px;
-    }
-`;
+// const BorderImg = styled.div`
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     width: 100%;
+//     background: url('${arrowLight}');
+//     &.top {
+//         top: 20px;
+//     }
+// `;
 
 // const Ignition = styled.div`
 //     position: absolute;

@@ -3,16 +3,17 @@ import Navbar from "../components/Navbar";
 import heroImg from "../images/herobg.png";
 import heroMob from "../images/hero-mob.png";
 import banner from "../images/bannerr.png";
+import banner2 from "../images/banner.png";
 import vocation from "../images/vocation.png";
 import entrepreneurship from "../images/entrepreneurship.png";
 import godliness from "../images/godliness.png";
 import apply from "../images/apply.png";
-import red from "../images/red-effect.png";
 import About from "../components/About";
 import Testimonials from "../components/Testimonials";
 import Data from "../data";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const words = [
@@ -30,6 +31,11 @@ export default function Home() {
     if (y === 3) y = 0;
     else y += 1;
   }
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [window.innerWidth])
   return (<>
       <Header>
         <Navbar />
@@ -37,7 +43,7 @@ export default function Home() {
           <img src={riseBig} alt="" />
         </Rise> */}
         <Banner>
-          <img src={banner} alt="" />
+          <img src={width < 768 ? banner : banner2} alt="" />
         </Banner>
         <Schools>
           <School>
@@ -99,8 +105,7 @@ export default function Home() {
 const Header = styled.div`
   background: url(${heroImg});
   background-size: cover;
-  min-height: calc(100vw * 0.7);
-  height: auto;
+  height: 130vh;
   width: 100%;
   overflow-x: hidden;
   position: relative;
@@ -177,6 +182,7 @@ const Apply = styled.div`
 const Schools = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -194,12 +200,17 @@ const School = styled.div`
   img {
     width: 300px;
     height: 250px;
+    @media(max-width: 768px) {
+      width: 300px;
+      height: 250px;
+    }
+    @media(max-width: 340px) {
+      width: 100%;
+      height: auto;
+    }
   }
   @media(max-width: 768px) {
-    margin: 20px 0;
-    img {
-      width: calc(100vw - 40px);
-    }
+    margin: 20px;
   }
 `;
 
@@ -264,65 +275,65 @@ const School = styled.div`
 //   }
 // `;
 
-const Courses = styled.div`
-  display: flex;
-  padding: 100px 6rem;
-  flex-direction: column;
-  background: url('${red}');
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    text-align: left;
-    @media (max-width: 768px) {
-      font-size: 2rem;
-    }
-  }
-  @media (max-width: 768px) {
-    padding: 100px 10px;
-  }
-`;
+// const Courses = styled.div`
+//   display: flex;
+//   padding: 100px 6rem;
+//   flex-direction: column;
+//   background: url('${red}');
+//   background-size: cover;
+//   justify-content: center;
+//   align-items: center;
+//   h1 {
+//     font-size: 3rem;
+//     font-weight: 800;
+//     color: white;
+//     text-align: left;
+//     @media (max-width: 768px) {
+//       font-size: 2rem;
+//     }
+//   }
+//   @media (max-width: 768px) {
+//     padding: 100px 10px;
+//   }
+// `;
 
-const CourseList = styled.div`
-  display: flex;
-  position: relative;
-  top: 50px;
-  width: 100vw;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 8rem;
-  flex-direction: row;
-  @media (max-width: 768px) {
-    padding: 10px;
-  }
-`;
+// const CourseList = styled.div`
+//   display: flex;
+//   position: relative;
+//   top: 50px;
+//   width: 100vw;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0 8rem;
+//   flex-direction: row;
+//   @media (max-width: 768px) {
+//     padding: 10px;
+//   }
+// `;
 
-const Course = styled.div`
-  display: flex;
-  color: white;
-  background: rgba(255, 255, 255, 0.3);
-  letter-spacing: 1px;
-  text-align: center;
-  flex-direction: column;
-  justify-content: space-round;
-  margin: 10px;
-  border-radius: 7.5px;
-  p {
-    font-size: 1rem;
-    padding: 10px;
-    font-weight: 500;
-    .link{
-      &:hover, &:active {
-        text-decoration: none;
-      }
-    }
-    @media (max-width: 768px) {
-      font-size: 10px;
-      font-weight: normal;
-    }
-  }
-`;
+// const Course = styled.div`
+//   display: flex;
+//   color: white;
+//   background: rgba(255, 255, 255, 0.3);
+//   letter-spacing: 1px;
+//   text-align: center;
+//   flex-direction: column;
+//   justify-content: space-round;
+//   margin: 10px;
+//   border-radius: 7.5px;
+//   p {
+//     font-size: 1rem;
+//     padding: 10px;
+//     font-weight: 500;
+//     .link{
+//       &:hover, &:active {
+//         text-decoration: none;
+//       }
+//     }
+//     @media (max-width: 768px) {
+//       font-size: 10px;
+//       font-weight: normal;
+//     }
+//   }
+// `;
