@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     display: flex;
     background: ${p => p.color || 'blue'};
     width: 320px;
-    height: 290px;
+    height: 300px;
     flex-wrap: wrap;
     overflow-x: hidden;
     align-items: center;
@@ -49,7 +49,7 @@ const Wrapper = styled.div`
     @media (max-width: 359px) {
         width: calc(100vw - 40px);
         height: auto;
-        min-height: 280px;
+        min-height: 300px;
     }
     box-shadow: 0 2px 10px;
     &:hover {
