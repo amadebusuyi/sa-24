@@ -53,10 +53,11 @@ export default function Home() {
             bgColor: '#1610F5',
             effect: blueEffect,
             courses: [
-              'Story telling',
-              'Film making',
+              'Storytelling & Film-making',
               'Web development',
               'Product Design',
+              'Hair dressing',
+              'Baking',
               'Fashion Design',
               'Cooking (Culinary art)'
             ]
