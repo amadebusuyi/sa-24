@@ -46,7 +46,7 @@ export default Navbar;
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: 50px 8rem;
+  padding: 50px 8rem 20px 8rem;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -57,6 +57,8 @@ const Wrapper = styled.div`
     display: inline-flex;
     position: absolute;
     left: 8rem;
+    top: 50%;
+    transform: translateY(-50%);
     @media (max-width: 768px) {
       height: 24px;
       left: 20px;
@@ -67,6 +69,8 @@ const Wrapper = styled.div`
     display: inline-flex;
     position: absolute;
     right: 8rem;
+    top: 50%;
+    transform: translateY(-50%);
     @media (max-width: 768px) {
       height: 30px;
       right: 20px !important;
@@ -74,13 +78,16 @@ const Wrapper = styled.div`
     }
   }
   .rise {
-    height: 100px;
+    height: 80px;
     display: inline-flex;
     position: relative;
-    left: 4rem;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-15%);
     @media screen and (max-width: 768px) {
+      top: 50%;
+      transform: translateY(-50%);
       position: absolute;
-      // justify-content: center;
       left: calc(50% - 40px);
       height: 30px;
       margin-left: 20px;

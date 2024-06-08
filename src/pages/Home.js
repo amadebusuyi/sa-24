@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-import heroImg from "../images/herobg.png";
+import heroImg from "../images/hero-img.png";
 import heroMob from "../images/hero-mob.png";
 import banner from "../images/bannerr.png";
 import banner2 from "../images/banner.png";
-import vocation from "../images/vocation.png";
-import entrepreneurship from "../images/entrepreneurship.png";
-import godliness from "../images/godliness.png";
+import blueEffect from "../images/blue-effect.png";
+import yellowEffect from "../images/yellow-effect.png";
+import redEffect from "../images/red-effect.png";
 import apply from "../images/apply.png";
 import About from "../components/About";
 import Testimonials from "../components/Testimonials";
@@ -14,6 +14,7 @@ import Data from "../data";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import CourseCard from "./CourseCard";
 
 export default function Home() {
   const words = [
@@ -46,15 +47,48 @@ export default function Home() {
           <img src={width < 768 ? banner : banner2} alt="" />
         </Banner>
         <Schools>
-          <School>
+          <CourseCard data={{
+            title: 'School of Vocation',
+            category: 'Specialization',
+            bgColor: '#1610F5',
+            effect: blueEffect,
+            courses: [
+              'Story telling',
+              'Film making',
+              'Web development',
+              'Product Design',
+              'Fashion Design',
+              'Cooking (Culinary art)'
+            ]
+          }} />
+          <CourseCard data={{
+            title: 'School of Godliness',
+            category: 'General',
+            bgColor: '#FD0302',
+            effect: redEffect,
+          }} />
+          <CourseCard data={{
+            title: 'School of Entrepreneurship',
+            category: 'General',
+            bgColor: '#FFB200',
+            effect: yellowEffect,
+            courses: [
+              'How to raise money for a business',
+              'Business & personal finance',
+              'Marketing',
+              'Time & Project Management',
+              'Artificial Intelligence (AI)'
+            ]
+          }} />
+          {/* <School>
             <img src={godliness} alt="" />
-          </School>
-          <School>
+          </School> */}
+          {/* <School>
             <img src={vocation} alt="" />
-          </School>
-          <School>
+          </School> */}
+          {/* <School>
             <img src={entrepreneurship} alt="" />
-          </School>
+          </School> */}
         </Schools>
         <Apply>
           <NavLink className="apply-button" to={'https://forms.gle/yfgfXUd3RHqpehSR6'} target="_blank">
