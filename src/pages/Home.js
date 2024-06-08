@@ -54,6 +54,7 @@ export default function Home() {
             effect: blueEffect,
             courses: [
               'Storytelling & Film-making',
+              'Graphics Design',
               'Web development',
               'Product Design',
               'Hair dressing',
