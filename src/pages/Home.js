@@ -53,7 +53,8 @@ export default function Home() {
             bgColor: '#1610F5',
             effect: blueEffect,
             courses: [
-              'Storytelling & Film-making',
+              'Storytelling',
+              'Film-making',
               'Graphics Design',
               'Web development',
               'Product Design',
