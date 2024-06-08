@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     display: flex;
     background: ${p => p.color || 'blue'};
     width: 320px;
-    height: 280px;
+    height: 290px;
     flex-wrap: wrap;
     overflow-x: hidden;
     align-items: center;
