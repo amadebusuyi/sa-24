@@ -250,35 +250,35 @@ const Testimonials = [
     {
         name: 'Jane Dhera',
         testimony: `Summer Academy is a space to equip the young ones and create a mindset of "you don't need to get to a certain age to do some thing big with your life".`,
-        img: 'https://academy.grtministry.com/public/410866250e01ad69fb5d3452f3d1b8c1.png',
+        img: 'https://gleeful-genie-d42a76.netlify.app/public/410866250e01ad69fb5d3452f3d1b8c1.png',
         course: 'Storytelling & Film-making',
         key: 'storyfilm'
     },
     {
         name: 'Olayinka Dosumu',
         testimony: `Attending summer academy was a great opportunity to learn new skills, meet like-minded individuals and have fun in the process`,
-        img: 'https://academy.grtministry.com/public/5299b59d6f77118647a34ad1d15a5d14.png',
+        img: 'https://gleeful-genie-d42a76.netlify.app/public/5299b59d6f77118647a34ad1d15a5d14.png',
         course: 'Web Development',
         key: 'webdev'
     },
     {
         name: 'Marie-Claire Osun',
         testimony: `Summer academy was an unusual opportunity that made a major turn in my career life .I got to meet mentors that has being in the industry and friends that is growth oriented`,
-        img: 'https://academy.grtministry.com/public/d73f6527fb7ebea7b47c43b5e13ec575.png',
+        img: 'https://gleeful-genie-d42a76.netlify.app/public/d73f6527fb7ebea7b47c43b5e13ec575.png',
         course: 'Web Development',
         key: 'webdev'
     },
     {
         name: 'Oluwadara Aremu',
         testimony: `Attending the academy was a great experience. I got the push that gave me a sense of purpose. It was also a chance for spiritual enlightenment and it was so much fun`,
-        img: 'https://academy.grtministry.com/public/d5ec769ae58858cdef48981bc9592a92.png',
+        img: 'https://gleeful-genie-d42a76.netlify.app/public/d5ec769ae58858cdef48981bc9592a92.png',
         course: 'Storytelling & Film-making',
         key: 'storyfilm'
     },
     {
         name: 'Efe Erero',
         testimony: `The Summer Academy provided me with a sense of purpose and helped me discover my career path. It also enabled me to enhance my creative abilities`,
-        img: 'https://academy.grtministry.com/public/e49712afb78dace3ad229852a74712f1.png',
+        img: 'https://gleeful-genie-d42a76.netlify.app/public/e49712afb78dace3ad229852a74712f1.png',
         course: 'Graphics Design',
         key: 'gdes'
     },
